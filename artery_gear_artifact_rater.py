@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 from fuzzywuzzy import fuzz, process
 
 load_dotenv()
-API_KEY = '0a7f0178f488957'
+API_KEY = os.getenv('OCR_SPACE_API_KEY')
 
 choices = ['HP', 'DEF', 'SPD', 'Status ACC', 'ATK', 'CRIT DMG', 'Critical', 'Status RES']
 
@@ -16,10 +16,10 @@ reg = re.compile(r'\d+(?:\.\d+)?')
 hp_reg = re.compile(r'\d,\d{3}')
 
 min_mains = {'HP': 611.0, 'ATK': 125.0, 'DEF': 70, 'ATK%': 10.0, 'Status ACC%':10.0, 'Status RES%':10.0,
-			 'SPD': 7.0, 'Critical%': 9.0, 'CRIT DMG%': 11.0, 
+			 'SPD': 7.0, 'Critical%': 9.0, 'CRIT DMG%': 11.0,
 			 'HP%': 10.0, 'DEF%': 10.0, }
 max_mains = {'HP': 3055, 'ATK': 625.0, 'DEF': 350, 'ATK%': 50.0, 'Status ACC%':50.0, 'Status RES%':50.0,
-			 'SPD': 35.0, 'Critical%': 45.0, 'CRIT DMG%': 	55.0, 
+			 'SPD': 35.0, 'Critical%': 45.0, 'CRIT DMG%': 	55.0,
 			 'HP%': 50.0, 'DEF%': 50.0, }
 max_subs = {'ATK': 232.0, 'SPD': 16.0, 'ATK%': 27.0, 'Status ACC%':27.0, 'Status RES%':27.0,
 			'Critical%': 16.0, 'CRIT DMG%': 25.0, 'DEF': 171.0, 'HP': 1021.0, 'DEF%': 27.0, 'HP%': 27.0}
