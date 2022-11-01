@@ -4,8 +4,6 @@ Discord bot that rates an artifact against an optimal 6* artifact. Put the comma
 -rate <image> [lvl=<level>] [<stat>=<weight> ...]
 ```
 
-If you just want to use the bot in your private server, contact shrubin#1866 on discord.
-
 #### Default Weights
 
 ATK%, DMG%, Critical, SPD, CRIT DMG - 1
