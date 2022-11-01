@@ -1,4 +1,4 @@
-aiohttp==3.6.3
+aiohttp==3.7.4
 discord.py==1.7.1
 fuzzywuzzy==0.18.0
 python-dotenv==0.15.0
